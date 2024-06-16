@@ -45,7 +45,7 @@ minikube addons enable ingress
 
 # Apply Kubernetes configuration files
 for file in *; do
-    if [[ $file == *"deployment"* ]] || [[ $file == *"service"* ]] || [[ $file == *"ingress"* ]]; then
+    if [[ $file == *"deployment"* ]] || [[ $file == *"service"* ]] || [[ $file == *"ingress"* ]] || [[ $file == *"configmap"* ]]; then
         echo "Applying configuration from $file..."
         kubectl apply -f "$file"
     fi
