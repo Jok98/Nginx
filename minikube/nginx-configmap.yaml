@@ -1,0 +1,16 @@
+# kubectl apply -f nginx-configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  nginx.conf: |
+    events { }
+    http {
+    server {
+        listen 80;
+        location / {
+            return 301 https://www.youtube.com/watch?v=dQw4w9WgXcQ;
+        }
+    }
+    }
