@@ -1,4 +1,4 @@
-# kubectl apply -f nginx-service.yaml
+# microk8s kubectl apply -f nginx-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -10,4 +10,3 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: NodePort

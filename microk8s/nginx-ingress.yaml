@@ -1,4 +1,4 @@
-# kubectl apply -f nginx-ingress.yaml
+# microk8s kubectl apply -f nginx-ingress.yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -7,7 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: my-nginx.local
+    - host: nginx.local
       http:
         paths:
           - path: /
